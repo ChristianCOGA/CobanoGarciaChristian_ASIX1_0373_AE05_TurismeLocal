@@ -24,10 +24,11 @@ header {
 /*Menu navegación*/
 .leftmenu{
     width: 25%;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
     background: linear-gradient(to right ,rgba(223, 78, 78, 0.7), rgba(255, 255, 255, 0.2));
     color: rgb(0, 0, 0);
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(75, 31, 31, 0.1);
 }
 .leftmenu h2 {
     text-align: center;
@@ -63,6 +64,7 @@ header {
     border-radius: 5px;
     color: rgb(0, 0, 0);
     background: #eec4c4;
+    text-align: center;
 }
 
 /*Contenido Principal*/
@@ -76,7 +78,6 @@ header {
     text-align: center;
 }
 .galeria{
-    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -89,7 +90,6 @@ header {
     min-height: 150px;
     max-width: 200px;
     max-height: 150px;
-    object-fit: cover;
 }
 
 .lugar {
@@ -147,15 +147,22 @@ footer {
        
 /* Responsive */ 
 @media screen and (max-width: 700px) {
-    .container {
+    .mainMenu {
         flex-direction: column;
     }
-
-    .menu, .contenido, .noticias {
+    .leftmenu{
+        background: linear-gradient(rgba(223, 78, 78, 0.7), rgba(255, 255, 255, 0.2));
+    }
+    .leftmenu, .contenido, .noticias {
         width: 100%;
     }
-
-    .menu ul li a {
-        text-align: left;
+    .noticias{
+        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(223, 78, 78, 0.7));
+    }
+    .leftmenu ul li a {
+        text-align: center;
+    }
+    .contactos{
+        text-align: center;
     }
 }
